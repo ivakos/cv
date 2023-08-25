@@ -1,0 +1,424 @@
+/*--------------------------------DEFAULT*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Comfortaa;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+P {
+  line-height: 120%;
+}
+
+.body {
+  width: 100%;
+  background-color: rgba(253, 250, 250, 0.192);
+  padding: 30px 30px;
+  transition: 0.5s;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 20px 70px;
+  border-radius: 5px;
+  background-color: white;
+  max-width: 1000px;
+  box-shadow: 0 0 300px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*--------------------------------HEADER*/
+h1 {
+  font-size: 56px;
+  font-weight: 600;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header__name {
+  width: 50%;
+}
+
+.header__photo {
+  width: 50%;
+}
+
+.line {
+  margin: 10px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 2px;
+  width: 70%;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+.header__photo-wrapper {
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+}
+
+.header__photo-image {
+  height: 200px;
+  width: auto;
+}
+
+/*--------------------------------NAV*/
+.nav {
+  margin: 20px 0 10px 0;
+}
+
+.nav__ul {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+}
+
+.nav__ul-li {
+  flex-grow: 1;
+}
+
+.nav__ul-a {
+  background-image: linear-gradient(#838383d7, #838383d7);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  transition: background-size .5s;
+}
+
+.nav__ul-a:hover {
+  background-size: 100% 1.5px;
+}
+
+/*--------------------------------MAIN*/
+
+.main {
+  padding-top: 3px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  width: 100%;
+  gap: 2px;
+}
+
+.section {
+  padding-top: 20px;
+  background-color: white;
+  width: 50%;
+}
+
+.container-section {
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+
+.section:first-child {
+  padding-right: 30px;
+}
+
+.section:last-child {
+  padding-left: 30px;
+}
+
+h3 {
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+/*--------------------------------CONTACTS*/
+.contacts, .profile, .education, .languages, .skills, .work-experience, .code-example {
+  transition: all 1.5s;
+}
+
+.section-hover {
+  background-color: rgba(0, 83, 0, 0.192);
+  box-shadow: 0 0 30px rgba(0, 83, 0, 0.384);
+  transition: all 0.3s;
+}
+
+.contacts__ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.contacts__ul-li {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__ul-a {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__ul-img {
+  max-width: 20px;
+  height: auto;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.contacts__ul-a:hover>.contacts__ul-img {
+  transform: scale(120%);
+  transition: all 0.3s;
+}
+
+/*--------------------------------PROFILE*/
+
+/*--------------------------------EDUCATION*/
+
+/*--------------------------------LANGUAGE*/
+
+/*--------------------------------CODE_EXAMPLE*/
+
+.code-example {
+  transition: all 1s;
+}
+
+pre {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: rgba(135, 138, 135, 0.11);
+}
+
+code {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/*--------------------------------SKILLS*/
+
+.skills__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.skills__ul>li {
+  list-style-position: inside;
+}
+
+/*--------------------------------WORK_EXPERIENCE*/
+
+h4 {
+  font-weight: 500;
+}
+
+.projects__a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+.projects__a:hover {
+  transform: scale(105%);
+  transition: all 0.3s;
+  background-color: rgba(0, 83, 0, 0.192);
+  box-shadow: 0 0 30px rgba(0, 83, 0, 0.384);
+  border-radius: 20px;
+}
+
+.projects__ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.projects__li:nth-child(2n)>a {
+  float: right;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.projects__img {
+  height: 100px;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.178);
+}
+
+.projects__txt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.techology__img {
+  width: 25px;
+}
+
+/*--------------------------------FOOTER*/
+
+.footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__github {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s;
+}
+
+.footer__rsschool {
+  transition: all 0.3s;
+}
+
+.footer__rsschool-img, .footer__github-img {
+  height: 40px;
+}
+
+.footer__rsschool:hover, .footer__github:hover {
+  transform: scale(110%);
+  transition: all 0.3s;
+}
+
+@media (max-width: 1000px) {
+
+  .nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav__ul {
+    flex-wrap: wrap;
+    max-width: 600px;
+    gap: 5px 20px;
+  }
+
+  code {
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  code {
+    font-size: 10px;
+  }
+
+}
+
+@media (max-width: 821px) {
+
+  .main {
+    flex-wrap: wrap;
+  }
+
+  .section {
+    width: 100%;
+  }
+
+  code {
+    font-size: 16px;
+  }
+
+  .section:first-child {
+    padding-right: 0;
+  }
+
+  .section:last-child {
+    padding-left: 0;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .container {
+    padding: 20px 40px;
+  }
+
+  .line {
+    width: 100%;
+  }
+
+  .body {
+    padding: 10px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .container {
+    padding: 10px 20px;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .body {
+    font-size: 0.5rem;
+  }
+
+}
+
+@media (max-width: 550px) {
+
+  .header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .header__name, .header__photo {
+    width: 100%;
+  }
+
+  code {
+    font-size: 8px;
+  }
+
+  .footer__github {
+    gap: 0px;
+  }
+
+  .footer__rsschool-img, .footer__github-img {
+    height: 20px;
+    vertical-align: top;
+  }
+
+  .footer>h2 {
+    font-size: 18px;
+  }
+
+  .footer {
+    margin-top: 5px;
+  }
+
+  .contacts__ul-a>p>i {
+    font-size: 15px;
+  }
+
+}
