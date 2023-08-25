@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivan Kasenka</title>
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="body">
+    <div class="container">
+      <header class="header">
+        <div class="header__name">
+          <h1>Ivan <br> Kasenka</h1>
+          <div class="line"></div>
+          <h2>
+            RSSCHOOL STUDENT
+          </h2>
+        </div>
+        <div class="header__photo">
+          <div class="header__photo-wrapper">
+            <img src="./image/avatar.jpg" alt="avatar" class="header__photo-image">
+          </div>
+        </div>
+      </header>
+      <nav class="nav">
+        <ul class="nav__ul">
+          <li class="nav__ul-li">
+            <a href="#contacts" class="nav__ul-a" id="nav_contacts" onmouseover="highlightDiv('#contacts')"
+              onmouseout="highlightDiv('#contacts')">
+              Contacts
+            </a>
+          </li>
+          <li class="nav__ul-li">
+            <a href="#profile" class="nav__ul-a" id="nav_profile" onmouseover="highlightDiv('#profile')"
+              onmouseout="highlightDiv('#profile')">
+              Profile
+            </a>
+          </li>
+          <li class="nav__ul-li">
+            <a href="#education" class="nav__ul-a" id="nav_education" onmouseover="highlightDiv('#education')"
+              onmouseout="highlightDiv('#education')">
+              Education
+            </a>
+          </li>
+          <li class="nav__ul-li">
+            <a href="#languages" class="nav__ul-a" id="nav_languages" onmouseover="highlightDiv('#languages')"
+              onmouseout="highlightDiv('#languages')">
+              Languages
+            </a>
+          </li>
+          <li class="nav__ul-li">
+            <a href="#code-example" class="nav__ul-a" id="nav_code-example" onmouseover="highlightDiv('#code-example')"
+              onmouseout="highlightDiv('#code-example')">
+              Code
+            </a>
+          </li>
+          <li class="nav__ul-li">
+            <a href="#skills" class="nav__ul-a" id="nav_skills" onmouseover="highlightDiv('#skills')"
+              onmouseout="highlightDiv('#skills')">
+              Skills
+            </a>
+          </li>
+          <li class="nav__ul-li">
+            <a href="#work-experience" class="nav__ul-a" id="nav_work-experience"
+              onmouseover="highlightDiv('#work-experience')" onmouseout="highlightDiv('#work-experience')">
+              Work Experience
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <main class="main">
+        <section class="about-me section">
+          <div class="contacts container-section" id="contacts">
+            <h3>Contacts</h3>
+            <ul class="contacts__ul">
+              <li class="contacts__ul-li">
+                <a href="mailto:kasenka.ivan@gmail.com" class="contacts__ul-a">
+                  <img src="./image/icons/gmail.svg" alt="gmail" class="contacts__ul-img">
+                  <p>E-mail: <i>kasenka.ivan@gmail.com</i></p>
+                </a>
+              </li>
+              <li class="contacts__ul-li">
+                <a href="https://telegram.me/kosenya" class="contacts__ul-a">
+                  <img src="./image/icons/telegram.svg" alt="gmail" class="contacts__ul-img">
+                  <p>Telegram: <i>@kosenya</i></p>
+                </a>
+              </li>
+              <li class="contacts__ul-li">
+                <a href="https://www.linkedin.com/in/ivan-kasenka-7a6577216/" class="contacts__ul-a">
+                  <img src="./image/icons/linkedin.svg" alt="linkedin" class="contacts__ul-img">
+                  <p>Linkedin</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="profile container-section" id="profile">
+            <h3>Profile</h3>
+            <p class="profile__text">
+              I’m 24 years old and I came from Belarus, city of Brest.
+              Nowadays I continue to develop my skills.
+              I think ability to learn is one of my strongest features.
+              As a perfectionist I am trying to complete my projects correctly and strictly.
+            </p>
+          </div>
+
+          <div class="education container-section" id="education">
+            <h3>Education</h3>
+            <p class="education__text">
+              Graduated from Brest State University as a system engineer in artificial intelligence at the faculty of
+              electronic information systems.
+            </p>
+          </div>
+
+          <div class="languages container-section" id="languages">
+            <h3>Languages</h3>
+            <p class="languages__text">
+              Russian - Native <br>
+              English - Intermediate
+            </p>
+          </div>
+
+          <div class="code-example container-section" id="code-example">
+            <h3>Code example</h3>
+            <p>Task: Unlucky Days</p>
+            <pre><code>function unluckyDays(year){
+  let date = 0, unlucky = 0;
+  for(let mounth = 0; mounth &lt; 12; mounth++){
+      let date = new Date(year, mounth, 13);
+      if(date.getDay() == 5)
+      unlucky++;
+  }
+  return unlucky;
+}</code></pre>
+          </div>
+        </section>
+
+        <section class="about-skills section">
+          <div class="skills container-section" id="skills">
+            <h3>Skills</h3>
+            <ul class="skills__ul">
+              <li>Knowledge of HTML5, CSS3, JavaScript, Git;</li>
+              <li>Experience in cross-browser&amp;adaptive website coding;</li>
+              <li>Experience in working with SASS, LESS;</li>
+              <li>Web site development experience using Visual Studio Code. </li>
+            </ul>
+          </div>
+
+          <div class="work-experience container-section" id="work-experience">
+            <h3>Work Experience</h3>
+            <ul class="projects__ul">
+              <li class="projects__li">
+                <a href="https://ivakos.github.io/apps/portfolio/" class="projects__a">
+                  <img src="./image/portfolio.JPG" alt="portfolio" class="projects__img">
+                  <div class="projects__txt-info">
+                    <h4>
+                      Portfolio
+                    </h4>
+                    <p>
+                      Single page landing.
+                    </p>
+                    <div class="projects__txt-img">
+                      <img src="./image/icons/html.png" alt="html" class="techology__img">
+                      <img src="./image/icons/css.png" alt="css" class="techology__img">
+                      <img src="./image/icons/javascript.png" alt="js" class="techology__img">
+                    </div>
+                  </div>
+
+                </a>
+              </li>
+              <li class="projects__li">
+                <a href="https://ivakos.github.io/apps/online-zoo/" class="projects__a">
+                  <img src="./image/online-zoo.JPG" alt="online-zoo" class="projects__img">
+                  <div class="projects__txt-info">
+                    <h4>
+                      Online-zoo
+                    </h4>
+                    <p>
+                      Single page landing.
+                    </p>
+                    <div class="projects__txt-img">
+                      <img src="./image/icons/html.png" alt="html" class="techology__img">
+                      <img src="./image/icons/css.png" alt="css" class="techology__img">
+                      <img src="./image/icons/javascript.png" alt="js" class="techology__img">
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="projects__li">
+                <a href="https://ivakos.github.io/apps/tic-tac-toe/" class="projects__a">
+                  <img src="./image/tic-tac-toe.JPG" alt="tic-tac-toe" class="projects__img">
+                  <div class="projects__txt-info">
+                    <h4>
+                      TicTacToe
+                    </h4>
+                    <p>
+                      Small app for fun.
+                    </p>
+                    <div class="projects__txt-img">
+                      <img src="./image/icons/html.png" alt="html" class="techology__img">
+                      <img src="./image/icons/css.png" alt="css" class="techology__img">
+                      <img src="./image/icons/javascript.png" alt="js" class="techology__img">
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="projects__li">
+                <a href="https://ivakos.github.io/apps/codejam/" class="projects__a">
+                  <img src="./image/codejam.JPG" alt="codejam" class="projects__img">
+                  <div class="projects__txt-info">
+                    <h4>
+                      CodeJam
+                    </h4>
+                    <p>
+                      Small app for fun.
+                    </p>
+                    <div class="projects__txt-img">
+                      <img src="./image/icons/html.png" alt="html" class="techology__img">
+                      <img src="./image/icons/css.png" alt="css" class="techology__img">
+                      <img src="./image/icons/javascript.png" alt="js" class="techology__img">
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <a href="https://github.com/ivakos" class="footer__github">
+          <img src="./image/icons/github-mark.svg" alt="github" class="footer__github-img">
+          Github
+        </a>
+        <h2 class="footer__year">2022</h2>
+        <a href="https://rs.school/js/" class="footer__rsschool">
+          <img src="./image/icons/rs_school_js.svg" alt="rsschool" class="footer__rsschool-img">
+        </a>
+      </footer>
+    </div>
+  </div>
+  <script>
+    function highlightDiv(elem) {
+      document.querySelector(elem).classList.toggle('section-hover');
+    }
+  </script>
+</body>
+
+</html>
