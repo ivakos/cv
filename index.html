@@ -8,17 +8,22 @@
   <title>Ivan Kasenka</title>
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="./image/icons/favicon.png">
 </head>
 
 <body>
   <div class="body">
     <div class="container">
+      <div class="lang-switcher">
+        <button class="lang">en</button>
+        <button class="lang">ru</button>
+      </div>
       <header class="header">
         <div class="header__name">
-          <h1>Ivan <br> Kasenka</h1>
+          <h1 data-lang="name"></h1>
           <div class="line"></div>
           <h2>
-            RSSCHOOL STUDENT
+            JUNIOR FRONT-END DEVELOPER
           </h2>
         </div>
         <div class="header__photo">
@@ -30,206 +35,168 @@
       <nav class="nav">
         <ul class="nav__ul">
           <li class="nav__ul-li">
-            <a href="#contacts" class="nav__ul-a" id="nav_contacts" onmouseover="highlightDiv('#contacts')"
-              onmouseout="highlightDiv('#contacts')">
-              Contacts
-            </a>
+            <a href="#contacts" class="nav__ul-a" id="nav_contacts" data-lang="contacts"></a>
           </li>
           <li class="nav__ul-li">
-            <a href="#profile" class="nav__ul-a" id="nav_profile" onmouseover="highlightDiv('#profile')"
-              onmouseout="highlightDiv('#profile')">
-              Profile
-            </a>
+            <a href="#profile" class="nav__ul-a" id="nav_profile" data-lang="about-myself"></a>
           </li>
           <li class="nav__ul-li">
-            <a href="#education" class="nav__ul-a" id="nav_education" onmouseover="highlightDiv('#education')"
-              onmouseout="highlightDiv('#education')">
-              Education
-            </a>
+            <a href="#languages" class="nav__ul-a" id="nav_languages" data-lang="languages"></a>
           </li>
           <li class="nav__ul-li">
-            <a href="#languages" class="nav__ul-a" id="nav_languages" onmouseover="highlightDiv('#languages')"
-              onmouseout="highlightDiv('#languages')">
-              Languages
-            </a>
+            <a href="#skills" class="nav__ul-a" id="nav_skills" data-lang="skills"></a>
           </li>
           <li class="nav__ul-li">
-            <a href="#code-example" class="nav__ul-a" id="nav_code-example" onmouseover="highlightDiv('#code-example')"
-              onmouseout="highlightDiv('#code-example')">
-              Code
-            </a>
+            <a href="#education" class="nav__ul-a" id="nav_education" data-lang="education"></a>
           </li>
           <li class="nav__ul-li">
-            <a href="#skills" class="nav__ul-a" id="nav_skills" onmouseover="highlightDiv('#skills')"
-              onmouseout="highlightDiv('#skills')">
-              Skills
-            </a>
+            <a href="#work-experience" class="nav__ul-a" id="nav_work-experience" data-lang="work-experience"></a>
           </li>
           <li class="nav__ul-li">
-            <a href="#work-experience" class="nav__ul-a" id="nav_work-experience"
-              onmouseover="highlightDiv('#work-experience')" onmouseout="highlightDiv('#work-experience')">
-              Work Experience
-            </a>
+            <a href="#portfolio" class="nav__ul-a" id="nav_portfolio" data-lang="portfolio"></a>
           </li>
         </ul>
       </nav>
       <main class="main">
-        <section class="about-me section">
-          <div class="contacts container-section" id="contacts">
-            <h3>Contacts</h3>
-            <ul class="contacts__ul">
-              <li class="contacts__ul-li">
-                <a href="mailto:kasenka.ivan@gmail.com" class="contacts__ul-a">
-                  <img src="./image/icons/gmail.svg" alt="gmail" class="contacts__ul-img">
-                  <p>E-mail: <i>kasenka.ivan@gmail.com</i></p>
-                </a>
-              </li>
-              <li class="contacts__ul-li">
-                <a href="https://telegram.me/kosenya" class="contacts__ul-a">
-                  <img src="./image/icons/telegram.svg" alt="gmail" class="contacts__ul-img">
-                  <p>Telegram: <i>@kosenya</i></p>
-                </a>
-              </li>
-              <li class="contacts__ul-li">
-                <a href="https://www.linkedin.com/in/ivan-kasenka-7a6577216/" class="contacts__ul-a">
-                  <img src="./image/icons/linkedin.svg" alt="linkedin" class="contacts__ul-img">
-                  <p>Linkedin</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="profile container-section" id="profile">
-            <h3>Profile</h3>
-            <p class="profile__text">
-              I’m 24 years old and I came from Belarus, city of Brest.
-              Nowadays I continue to develop my skills.
-              I think ability to learn is one of my strongest features.
-              As a perfectionist I am trying to complete my projects correctly and strictly.
-            </p>
-          </div>
 
-          <div class="education container-section" id="education">
-            <h3>Education</h3>
-            <p class="education__text">
-              Graduated from Brest State University as a system engineer in artificial intelligence at the faculty of
-              electronic information systems.
-            </p>
-          </div>
+        <div class="contacts container-section" id="contacts">
+          <h3 data-lang="contacts"></h3>
+          <ul class="contacts__ul">
+            <li class="contacts__ul-li">
+              <a href="mailto:kasenka.ivan@gmail.com" class="contacts__ul-a">
+                <img src="./image/icons/gmail.svg" alt="gmail" class="contacts__ul-img">
+                <p>E-mail: <i>kasenka.ivan@gmail.com</i></p>
+              </a>
+            </li>
+            <li class="contacts__ul-li">
+              <a href="https://telegram.me/kosenya" class="contacts__ul-a">
+                <img src="./image/icons/telegram.svg" alt="gmail" class="contacts__ul-img">
+                <p>Telegram: <i>@kosenya</i></p>
+              </a>
+            </li>
+            <li class="contacts__ul-li">
+              <a href="https://www.linkedin.com/in/ivan-kasenka-7a6577216/" class="contacts__ul-a">
+                <img src="./image/icons/linkedin.svg" alt="linkedin" class="contacts__ul-img">
+                <p>Linkedin</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="profile container-section" id="profile">
+          <h3 data-lang="about-myself"></h3>
+          <p class="profile__text" data-lang="about"></p>
+        </div>
 
-          <div class="languages container-section" id="languages">
-            <h3>Languages</h3>
-            <p class="languages__text">
-              Russian - Native <br>
-              English - Intermediate
-            </p>
-          </div>
+        <div class="languages container-section" id="languages">
+          <h3 data-lang="languages"></h3>
+          <p class="languages__text" data-lang="language-1"></p>
+          <p class="languages__text" data-lang="language-2"></p>
+          <p class="languages__text" data-lang="language-3"></p>
+        </div>
 
-          <div class="code-example container-section" id="code-example">
-            <h3>Code example</h3>
-            <p>Task: Unlucky Days</p>
-            <pre><code>function unluckyDays(year){
-  let date = 0, unlucky = 0;
-  for(let mounth = 0; mounth &lt; 12; mounth++){
-      let date = new Date(year, mounth, 13);
-      if(date.getDay() == 5)
-      unlucky++;
-  }
-  return unlucky;
-}</code></pre>
-          </div>
-        </section>
+        <div class="skills container-section" id="skills">
+          <h3 data-lang="skills"></h3>
+          <ul class="skills__ul">
+            <li data-lang="skill-1"></li>
+            <li data-lang="skill-2"></li>
+            <li data-lang="skill-3"></li>
+            <li data-lang="skill-4"></li>
+            <li data-lang="skill-5"></li>
+            <li data-lang="skill-6"></li>
+          </ul>
+        </div>
 
-        <section class="about-skills section">
-          <div class="skills container-section" id="skills">
-            <h3>Skills</h3>
-            <ul class="skills__ul">
-              <li>Knowledge of HTML5, CSS3, JavaScript, Git;</li>
-              <li>Experience in cross-browser&amp;adaptive website coding;</li>
-              <li>Experience in working with SASS, LESS;</li>
-              <li>Web site development experience using Visual Studio Code. </li>
-            </ul>
+        <div class="education container-section" id="education">
+          <h3 data-lang="education"></h3>
+          <div class="timeline">
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div class="timeline-head__title" data-lang="education-1-title"></div>
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-head__subtitle" data-lang="education-1-subtitle"></div>
+                <div class="timeline-body__time" data-lang="education-1-time"></div>
+                <div class="timeline-body__description">
+                  <p data-lang="education-1-li-1"></p>
+                  <p data-lang="education-1-li-2"></p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
 
-          <div class="work-experience container-section" id="work-experience">
-            <h3>Work Experience</h3>
-            <ul class="projects__ul">
-              <li class="projects__li">
-                <a href="https://ivakos.github.io/apps/portfolio/" class="projects__a">
-                  <img src="./image/portfolio.JPG" alt="portfolio" class="projects__img">
-                  <div class="projects__txt-info">
-                    <h4>
-                      Portfolio
-                    </h4>
-                    <p>
-                      Single page landing.
-                    </p>
-                    <div class="projects__txt-img">
-                      <img src="./image/icons/html.png" alt="html" class="techology__img">
-                      <img src="./image/icons/css.png" alt="css" class="techology__img">
-                      <img src="./image/icons/javascript.png" alt="js" class="techology__img">
-                    </div>
+        <div class="work-experience container-section" id="work-experience">
+          <h3 data-lang="work-experience"></h3>
+          <div class="timeline">
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div class="timeline-head__title" data-lang="work-1-title"></div>
+              </div>
+              <div class="timeline-body">
+                <div class="timeline-head__subtitle" data-lang="work-1-subtitle"></div>
+                <div class="timeline-body__time" data-lang="work-1-time"></div>
+                <div class="timeline-body__description">
+                  <ul>
+                    <li data-lang="work-1-li-1"></li>
+                    <li data-lang="work-1-li-2"></li>
+                    <li data-lang="work-1-li-3"></li>
+                    <li data-lang="work-1-li-4"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio container-section" id="portfolio">
+          <h3 data-lang="portfolio"></h3>
+          <ul class="projects__ul">
+            <li class="projects__li">
+              <a href="https://ivakos.github.io/apps/shelter/pages/main/" class="projects__a">
+                <img src="./image/shelter.JPG" alt="shelter" class="projects__img">
+                <div class="projects__txt-info">
+                  <h4 data-lang="project-1__title"></h4>
+                  <p data-lang="project-1__description"></p>
+                  <div class="projects__txt-img">
+                    <img src="./image/icons/html.png" alt="html" class="techology__img">
+                    <img src="./image/icons/css.png" alt="css" class="techology__img">
+                    <img src="./image/icons/javascript.png" alt="js" class="techology__img">
                   </div>
+                </div>
+              </a>
+            </li>
 
-                </a>
-              </li>
-              <li class="projects__li">
-                <a href="https://ivakos.github.io/apps/online-zoo/" class="projects__a">
-                  <img src="./image/online-zoo.JPG" alt="online-zoo" class="projects__img">
-                  <div class="projects__txt-info">
-                    <h4>
-                      Online-zoo
-                    </h4>
-                    <p>
-                      Single page landing.
-                    </p>
-                    <div class="projects__txt-img">
-                      <img src="./image/icons/html.png" alt="html" class="techology__img">
-                      <img src="./image/icons/css.png" alt="css" class="techology__img">
-                      <img src="./image/icons/javascript.png" alt="js" class="techology__img">
-                    </div>
+            <li class="projects__li">
+              <a href="https://ivakos.github.io/apps/minesweeper/" class="projects__a">
+                <img src="./image/minesweeper.JPG" alt="minesweeper" class="projects__img">
+                <div class="projects__txt-info">
+                  <h4 data-lang="project-2__title"></h4>
+                  <p data-lang="project-2__description"></p>
+                  <div class="projects__txt-img">
+                    <img src="./image/icons/html.png" alt="html" class="techology__img">
+                    <img src="./image/icons/css.png" alt="css" class="techology__img">
+                    <img src="./image/icons/javascript.png" alt="js" class="techology__img">
                   </div>
-                </a>
-              </li>
-              <li class="projects__li">
-                <a href="https://ivakos.github.io/apps/tic-tac-toe/" class="projects__a">
-                  <img src="./image/tic-tac-toe.JPG" alt="tic-tac-toe" class="projects__img">
-                  <div class="projects__txt-info">
-                    <h4>
-                      TicTacToe
-                    </h4>
-                    <p>
-                      Small app for fun.
-                    </p>
-                    <div class="projects__txt-img">
-                      <img src="./image/icons/html.png" alt="html" class="techology__img">
-                      <img src="./image/icons/css.png" alt="css" class="techology__img">
-                      <img src="./image/icons/javascript.png" alt="js" class="techology__img">
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li class="projects__li">
-                <a href="https://ivakos.github.io/apps/codejam/" class="projects__a">
-                  <img src="./image/codejam.JPG" alt="codejam" class="projects__img">
-                  <div class="projects__txt-info">
-                    <h4>
-                      CodeJam
-                    </h4>
-                    <p>
-                      Small app for fun.
-                    </p>
-                    <div class="projects__txt-img">
-                      <img src="./image/icons/html.png" alt="html" class="techology__img">
-                      <img src="./image/icons/css.png" alt="css" class="techology__img">
-                      <img src="./image/icons/javascript.png" alt="js" class="techology__img">
-                    </div>
-                  </div>
-                </a>
-              </li>
+                </div>
+              </a>
+            </li>
 
-            </ul>
-          </div>
-        </section>
+            <li class="projects__li">
+              <a href="https://ivakos.github.io/apps/virtual-keyboard/" class="projects__a">
+                <img src="./image/keyboard.JPG" alt="keyboard" class="projects__img">
+                <div class="projects__txt-info">
+                  <h4 data-lang="project-3__title"></h4>
+                  <p data-lang="project-3__description"></p>
+                  <div class="projects__txt-img">
+                    <img src="./image/icons/html.png" alt="html" class="techology__img">
+                    <img src="./image/icons/css.png" alt="css" class="techology__img">
+                    <img src="./image/icons/javascript.png" alt="js" class="techology__img">
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </main>
 
       <footer class="footer">
@@ -237,18 +204,12 @@
           <img src="./image/icons/github-mark.svg" alt="github" class="footer__github-img">
           Github
         </a>
-        <h2 class="footer__year">2022</h2>
-        <a href="https://rs.school/js/" class="footer__rsschool">
-          <img src="./image/icons/rs_school_js.svg" alt="rsschool" class="footer__rsschool-img">
-        </a>
+        <h5 class="footer__year">2023</h5>
+        <h5 class="footer__year">Designed by me</h5>
       </footer>
     </div>
   </div>
-  <script>
-    function highlightDiv(elem) {
-      document.querySelector(elem).classList.toggle('section-hover');
-    }
-  </script>
+  <script src="./script.js" type="module"></script>
 </body>
 
 </html>
