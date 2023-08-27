@@ -22,6 +22,10 @@ P {
   line-height: 120%;
 }
 
+li {
+  list-style-position: inside;
+}
+
 .body {
   width: 100%;
   background-color: rgba(253, 250, 250, 0.192);
@@ -30,6 +34,7 @@ P {
 }
 
 .container {
+  position: relative;
   margin: 0 auto;
   padding: 20px 70px;
   border-radius: 5px;
@@ -41,9 +46,39 @@ P {
 
 
 /*--------------------------------HEADER*/
+
+.lang-switcher {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.lang {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px;
+  transition: all 0.3s;
+}
+
+.lang:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  transform: scale(110%);
+}
+
+.lang.active {
+  background-color: black;
+  color: aliceblue;
+  box-shadow: 0 0 2px black;
+}
+
 h1 {
   font-size: 56px;
   font-weight: 600;
+  max-width: 270px;
 }
 
 .header {
@@ -72,6 +107,8 @@ h2 {
 }
 
 .header__photo-wrapper {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
   border-radius: 50%;
   border: 2px solid rgba(0, 0, 0, 0.3);
@@ -81,17 +118,23 @@ h2 {
 }
 
 .header__photo-image {
+  transform: scale(120%);
   height: 200px;
   width: auto;
 }
 
 /*--------------------------------NAV*/
 .nav {
-  margin: 20px 0 10px 0;
+  margin: 20px 0 20px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .nav__ul {
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  max-width: 600px;
   list-style-type: none;
   text-align: center;
 }
@@ -115,46 +158,33 @@ h2 {
 /*--------------------------------MAIN*/
 
 .main {
-  padding-top: 3px;
-  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 15px;
   display: flex;
+  flex-direction: column;
   width: 100%;
   gap: 2px;
 }
 
-.section {
-  padding-top: 20px;
-  background-color: white;
-  width: 50%;
-}
-
 .container-section {
-  padding-bottom: 20px;
   border-radius: 20px;
-}
-
-.section:first-child {
-  padding-right: 30px;
-}
-
-.section:last-child {
-  padding-left: 30px;
 }
 
 h3 {
   font-weight: 600;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
 /*--------------------------------CONTACTS*/
-.contacts, .profile, .education, .languages, .skills, .work-experience, .code-example {
+.contacts, .profile, .education, .languages, .skills, .work-experience, .portfolio {
+  padding: 3px;
+  margin-bottom: 25px;
   transition: all 1.5s;
 }
 
 .section-hover {
   background-color: rgba(0, 83, 0, 0.192);
-  box-shadow: 0 0 30px rgba(0, 83, 0, 0.384);
+  box-shadow: 0 0 15px rgba(0, 83, 0, 0.384);
   transition: all 0.3s;
 }
 
@@ -193,24 +223,6 @@ h3 {
 
 /*--------------------------------LANGUAGE*/
 
-/*--------------------------------CODE_EXAMPLE*/
-
-.code-example {
-  transition: all 1s;
-}
-
-pre {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: rgba(135, 138, 135, 0.11);
-}
-
-code {
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
 /*--------------------------------SKILLS*/
 
 .skills__ul {
@@ -225,14 +237,73 @@ code {
 
 /*--------------------------------WORK_EXPERIENCE*/
 
+.timeline-card {
+  position: relative;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.timeline-card:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 100%;
+  width: 12px;
+  height: 12px;
+  top: -2px;
+  left: -10px;
+  border: 5px solid;
+  z-index: 2;
+  border-color: black;
+}
+
+.timeline-head {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
+.timeline-body {
+  margin-top: 7px;
+  padding: 0px 35px 0 35px;
+  border-left: 2px solid #E6E9ED;
+}
+
+.timeline-head__title {
+  font-weight: bold;
+}
+
+.timeline-head__subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.timeline-body__time {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.timeline-body__description {
+  font-size: 0.9rem;
+}
+
+.timeline-body__description>ul {
+  line-height: 110%;
+}
+
+/*--------------------------------PORTFOLIO*/
+
 h4 {
   font-weight: 500;
 }
 
 .projects__a {
+  width: 100%;
+  padding: 3px;
   display: flex;
   align-items: center;
   gap: 10px;
+  border-radius: 30px;
   transition: all 0.3s;
 }
 
@@ -240,8 +311,8 @@ h4 {
   transform: scale(105%);
   transition: all 0.3s;
   background-color: rgba(0, 83, 0, 0.192);
-  box-shadow: 0 0 30px rgba(0, 83, 0, 0.384);
-  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 83, 0, 0.384);
+  border-radius: 30px;
 }
 
 .projects__ul {
@@ -252,7 +323,6 @@ h4 {
 }
 
 .projects__li:nth-child(2n)>a {
-  float: right;
   flex-direction: row-reverse;
   text-align: right;
 }
@@ -289,75 +359,24 @@ h4 {
   transition: all 0.3s;
 }
 
-.footer__rsschool {
-  transition: all 0.3s;
-}
-
-.footer__rsschool-img, .footer__github-img {
+.footer__github-img {
   height: 40px;
 }
 
-.footer__rsschool:hover, .footer__github:hover {
+.footer__github:hover {
   transform: scale(110%);
   transition: all 0.3s;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
 
-  .nav {
-    display: flex;
-    justify-content: center;
-  }
-
-  .nav__ul {
-    flex-wrap: wrap;
-    max-width: 600px;
-    gap: 5px 20px;
-  }
-
-  code {
-    font-size: 12px;
-  }
-
-}
-
-@media (max-width: 900px) {
-
-  code {
-    font-size: 10px;
-  }
-
-}
-
-@media (max-width: 821px) {
-
-  .main {
-    flex-wrap: wrap;
-  }
-
-  .section {
-    width: 100%;
-  }
-
-  code {
-    font-size: 16px;
-  }
-
-  .section:first-child {
-    padding-right: 0;
-  }
-
-  .section:last-child {
-    padding-left: 0;
+  .container {
+    padding: 10px 20px;
   }
 
 }
 
 @media (max-width: 700px) {
-
-  .container {
-    padding: 20px 40px;
-  }
 
   .line {
     width: 100%;
@@ -366,26 +385,13 @@ h4 {
   .body {
     padding: 10px;
   }
-
-}
-
-@media (max-width: 600px) {
-
-  .container {
-    padding: 10px 20px;
-  }
-
 }
 
 @media (max-width: 550px) {
 
-  .body {
-    font-size: 0.5rem;
+  * {
+    font-size: 16px;
   }
-
-}
-
-@media (max-width: 550px) {
 
   .header {
     flex-wrap: wrap;
@@ -396,29 +402,37 @@ h4 {
     width: 100%;
   }
 
-  code {
-    font-size: 8px;
+  .contacts__ul-a>p>i {
+    font-size: 0.9rem;
+  }
+
+  .projects__li:nth-child(2n)>a {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .projects__a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
   }
 
   .footer__github {
     gap: 0px;
   }
 
-  .footer__rsschool-img, .footer__github-img {
+  .footer__github-img {
     height: 20px;
     vertical-align: top;
   }
 
-  .footer>h2 {
-    font-size: 18px;
+  .footer>h5 {
+    font-size: 0.8rem;
   }
 
   .footer {
     margin-top: 5px;
-  }
-
-  .contacts__ul-a>p>i {
-    font-size: 15px;
   }
 
 }
