@@ -43,8 +43,6 @@ li {
   box-shadow: 0 0 300px rgba(0, 0, 0, 0.1);
 }
 
-
-
 /*--------------------------------HEADER*/
 
 .lang-switcher {
@@ -149,6 +147,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: 0% 1.5px;
   transition: background-size .5s;
+  font-weight: 400;
 }
 
 .nav__ul-a:hover {
