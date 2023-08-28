@@ -1,6 +1,5 @@
-import langObj from './language.js';
+import langObj from './languageObj.js';
 
-//Change language
 const textToTranslate = document.querySelectorAll('[data-lang]');
 
 let current = localStorage.getItem('lang_CV_IVAN_KASENKA')
@@ -29,20 +28,3 @@ function getTranslate(language) {
   textToTranslate.forEach((element) => element.textContent = langObj
   [language][element.dataset.lang])
 };
-//END change language
-
-//Section highlighting
-const links = document.querySelectorAll('.nav__ul-a');
-links.forEach((el) => {
-  el.addEventListener('mouseover', () => {
-    highlightSec(`${el.hash}`);
-  })
-  el.addEventListener('mouseout', () => {
-    highlightSec(`${el.hash}`);
-  })
-});
-
-function highlightSec(elem) {
-  document.querySelector(elem).classList.toggle('section-hover');
-}
-//END section highlighting
