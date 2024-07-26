@@ -286,8 +286,8 @@ h3 {
   font-size: 0.9rem;
 }
 
-.timeline-body__description>ul {
-  line-height: 110%;
+.timeline-body__description>ul, .timeline-body__description>p {
+  line-height: 130%;
 }
 
 /*--------------------------------PORTFOLIO*/
