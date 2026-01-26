@@ -4,7 +4,7 @@ const textToTranslate = document.querySelectorAll('[data-lang]');
 
 let current = localStorage.getItem('lang_CV_IVAN_KASENKA')
   ? localStorage.getItem('lang_CV_IVAN_KASENKA')
-  : 'en';
+  : 'ru';
 
 const lang = document.querySelectorAll('.lang');
 
