@@ -55,6 +55,7 @@ const langObj = {
     'project-2__description': 'Small app for fun.',
     'project-3__title': 'Virtual keyboard',
     'project-3__description': 'Small app for fun.',
+    'code': 'Code'
   },
   'ru': {
     'name': 'Иван Косенко',
@@ -112,6 +113,7 @@ const langObj = {
     'project-2__description': 'Небольшое приложение забавы ради',
     'project-3__title': 'Виртуальная клавиатура',
     'project-3__description': 'Небольшое приложение забавы ради',
+    'code': 'Код',
   }
 }
 export default langObj;

@@ -175,7 +175,7 @@ h3 {
 }
 
 /*--------------------------------CONTACTS*/
-.contacts, .profile, .education, .languages, .skills, .work-experience, .portfolio {
+.contacts, .profile, .education, .languages, .skills, .work-experience, .portfolio, .code {
   padding: 3px;
   margin-bottom: 25px;
   transition: all 1.5s;
@@ -347,22 +347,22 @@ h4 {
 .footer {
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.footer__github {
+.footer__github, .footer__course {
   display: flex;
   align-items: center;
   gap: 20px;
   transition: all 0.3s;
 }
 
-.footer__github-img {
+.footer__github-img, .footer__course-img {
   height: 40px;
 }
 
-.footer__github:hover {
+.footer__github:hover, .footer__course:hover {
   transform: scale(110%);
   transition: all 0.3s;
 }
@@ -435,4 +435,8 @@ h4 {
     margin-top: 5px;
   }
 
+}
+
+.block-none {
+  display: none;
 }
